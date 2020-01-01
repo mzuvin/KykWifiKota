@@ -1,0 +1,32 @@
+{
+  "name": "Kyk Wifi Kota Dostu",
+  "description" : "Son Hareketler",
+  "version": "1.0",
+  "options_page": "options.html",
+  "browser_action": {
+    "default_popup": "hello.html",
+    "default_icon": "logo.png"
+  },
+  "background": {
+    "scripts": ["back.js"]
+  },
+  "permissions": [
+  "webRequest",
+  "webRequestBlocking",
+  "webNavigation",
+  "activeTab",
+  "tabs",
+  "cookies",
+  "<all_urls>"
+  ],
+  "manifest_version": 2,
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens hello.html"
+    }
+  }
+}

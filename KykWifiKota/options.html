@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<title></title>
+<style type="text/css">
+  body {
+  background: #fff1b5;
+}
+
+.wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 30px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type=&quot;text&quot;] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type=&quot;password&quot;] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	function kaydet() {
+		localStorage.setItem('wifigiris', document.getElementsByTagName('input')[0].value);
+		localStorage.setItem('wifigiris2', document.getElementsByTagName('input')[1].value);
+		alert('kaydedildi.');
+	}
+</script>
+  <div class="wrapper">
+    <div class="form-signin">       
+      <h2 class="form-signin-heading">Otomatik Wifi Giriş</h2>
+      <h5 class="form-signin-heading">Bilgiler sadece tarayıca kayıt edilmektedir. Güvenmiyorsanız girmeyin! Amaç tek tıkla otomatik giriş yapmak. İstemiyorsanız wifi.kyk.gov.tr den giriş yapabilirsiniz.</h5>
+      <input type="text" class="form-control" name="username" placeholder="Tc kimlik" required="" autofocus="" />
+      <input type="password" class="form-control" name="password" placeholder="Sifre" required=""/>
+      <button class="btn btn-lg btn-primary btn-block" onclick="kaydet()">Kaydet</button>
+    </div>
+  </div>
+</body>
+</html>
